@@ -1,42 +1,144 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
+import { motion } from "framer-motion";
 
-// Import Swiper styles
-import "swiper/css";
-import { Box, Button, Flex, Grid, GridItem, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import Slider from "./components/Slider";
-
-export default () => {
-  const section4 = {
-    bgImage: "url(products-file.png)",
-    h: "100vh",
-    bgSize: "100% 100%",
-    alignItems: "center",
-    overflow: "",
-  };
-  const section4Context = {
-    textAlign: "left",
-    p: { base: "10px", md: "50px", lg: "200px" },
-    overflow: "auto",
-  };
+const Line = () => {
   return (
-    <Grid templateColumns="repeat(6, 1fr)" gap={4} bgColor='blue'>
-    <GridItem colStart={2} colSpan={6}>
-      {/* Content for the first item */}
-      dbadsbdh
-    </GridItem>
-    <GridItem colSpan={2}>
-      {/* Content for the second item */}
-      hey
-    </GridItem>
-    <GridItem colSpan={2}>
-      {/* Content for the third item */}
-      broda
-    </GridItem>
-    <GridItem colSpan={2}>
-      {/* Content for the fourth item */}
-    </GridItem>
-    {/* ... Add more GridItems as needed */}
-  </Grid>
+    <div style={{ display: "flex", justifyContent: "center", height: "700px", backgroundColor: 'cyan' }}>
+      <motion.div
+        style={{
+          width: "2px",
+          height: "100%",
+          backgroundColor: "black",
+          position: "relative",
+        }}
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.div
+          style={{
+            width: "20px",
+            height: "20px",
+            backgroundColor: "red",
+            borderRadius: "50%",
+            position: "absolute",
+            left: "-10px",
+            top: "0",
+          }}
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+        <motion.div
+          style={{
+            width: "20px",
+            height: "20px",
+            backgroundColor: "blue",
+            borderRadius: "50%",
+            position: "absolute",
+            left: "-10px",
+            bottom: "0",
+          }}
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+
+<motion.div
+          style={{
+            width: "20px",
+            height: "20px",
+            backgroundColor: "yellow",
+            borderRadius: "50%",
+            position: "absolute",
+            left: "-10px",
+            bottom: "50%",
+          }}
+          initial={{ y: 50 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+      </motion.div>
+      <div style={{ margin: "10px" }}>
+        <p>Text on the left side</p>
+      </div>
+      <div style={{ margin: "10px" }}>
+        <p>Text on the right side</p>
+      </div>
+
+      <motion.div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "2px",
+          background: "#000",
+        }}
+      >
+        <motion.div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "calc(25% - 4px)",
+            width: "8px",
+            height: "8px",
+            borderRadius: "50%",
+            background: "#000",
+            transformOrigin: "center",
+            transformStyle: "preserve-3d",
+            rotateY: 0,
+          }}
+          animate={{ rotateY: 360 }}
+          transition={{
+            repeat: Infinity,
+            duration: 5,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "calc(50% - 4px)",
+            width: "8px",
+            height: "8px",
+            borderRadius: "50%",
+            background: "#000",
+            transformOrigin: "center",
+            transformStyle: "preserve-3d",
+            rotateY: 0,
+          }}
+          animate={{ rotateY: 360 }}
+          transition={{
+            repeat: Infinity,
+            duration: 5,
+            ease: "linear",
+            delay: 0.5,
+          }}
+        />
+        <motion.div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "calc(75% - 4px)",
+            width: "8px",
+            height: "8px",
+            borderRadius: "50%",
+            background: "#000",
+            transformOrigin: "center",
+            transformStyle: "preserve-3d",
+            rotateY: 0,
+          }}
+          animate={{ rotateY: 360 }}
+          transition={{
+            repeat: Infinity,
+            duration: 5,
+            ease: "linear",
+            delay: 1,
+          }}
+        />
+      </motion.div>
+    </div>
   );
 };
+
+export default Line;

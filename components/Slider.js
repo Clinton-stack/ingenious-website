@@ -90,7 +90,7 @@ return(
       modules={[Autoplay, Pagination, Navigation, EffectCube]}
       spaceBetween={1}
       autoplay={{
-        delay: 5500,
+        delay: 6000,
         disableOnInteraction: false,
       }}
       effect="cube"

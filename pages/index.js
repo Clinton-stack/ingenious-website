@@ -18,7 +18,7 @@ import {
   VStack,
   Wrap,
 } from "@chakra-ui/react";
-import Slider from "./components/Slider";
+import Slider from "../components/Slider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -59,7 +59,7 @@ export default function Home() {
     bgRepeat: "no-repeat",
     bgPos: "center",
     alignItems: "center",
-    overflow: "hidden",
+    overflow: "",
   };
 
   const services = {
@@ -95,7 +95,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container  sx={mainContainer} maxW='100%' px='50px' py='9'>
+      <Container  sx={mainContainer} maxW='100%' px='55px' py='9'>
         <Flex sx={section1} textAlign="center">
           <Image src="/ingenious-1.svg" alt="INGENIOUS" w="40vw"></Image>
         </Flex>
@@ -277,7 +277,7 @@ export default function Home() {
                 </Text>
               </VStack>
             </Flex>
-            <Flex sx={services} pos="relative" top="40px" zIndex={1}>
+            <Flex sx={services} pos="relative" top="40px" zIndex={2}>
               <VStack alignItems="left" textAlign="left" spacing="50px">
                 <HStack spacing="100px">
                   <Image
@@ -302,7 +302,7 @@ export default function Home() {
         </Box>
         <Box py={10} textAlign='center' w='100%'>
           <Heading fontSize="4vw" color="#73D0FF" mb="40px">
-            Products and Services
+            Products and Solutions
           </Heading>
           <Slider/>
         </Box>
