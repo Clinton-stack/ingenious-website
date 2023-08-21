@@ -1,18 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
- body{
-  font-family: 'Poppins', sans-serif !important;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif !important;
   color: white !important;
+  max-width: 100vw;
 }
-h1, h2, h3, h4, h5{
-  font-family: 'Poppins', sans-serif !important;
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif !important;
 }
 
-
-.MySwiper{
-  width: 100%;
+.MySwiper {
+  width: 80%;
 }
 :root {
-  --swiper-theme-color: #fff!important;
+  --swiper-theme-color: #fff !important;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+text {
+  fill: white;
+  font-size: 15px;
+  font-family: "Signika Negative", sans-serif;
+  visibility: hidden;
+}
+
+.container {
+  color: white;
+}
+
+svg {
+  max-width: 600px;
+  margin-left: 50%;
+  overflow: visible;
+  margin-top: 50vh;
+}
+
+.ball {
+  fill: rgb(69, 207, 217);
+  visibility: hidden;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+text {
+  fill: white;
+  font-size: 15px;
+  font-family: "Signika Negative", sans-serif;
+  visibility: hidden;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  svg {
+    margin-left: 50%;
+    overflow: visible;
+  }
+  text {
+    fill: white;
+    font-size: 20px;
+    font-family: "Signika Negative", sans-serif;
+    visibility: hidden;
+  }
 }
