@@ -84,6 +84,14 @@ export default function Home() {
         </div>
 
         <div id="client&partners" className="mb-10 overflow-hidden">
+        <Heading
+              className="  text-xl lg:text-2xl"
+              textAlign="center"
+              color="#73D0FF"
+              mb="40px"
+            >
+              Clients and Partners
+            </Heading>
           <Companies />
         </div>
 
