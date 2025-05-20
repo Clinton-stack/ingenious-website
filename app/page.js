@@ -1,19 +1,11 @@
-
-import {
-  Box,
-  Heading,
-} from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 import Slider from "../components/Slider";
 import Particlebg from "@/utils/Particlebg";
 import ScrollUpButton from "@/components/ScrollToUpButton";
 import Companies from "@/components/Companies";
 import ContactUs from "@/components/ContactUs";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
 import Timeline from "@/components/Timeline/Timeline";
@@ -22,10 +14,7 @@ import BlinkingIcon from "@/components/BlinkingIcon";
 import ServiceList from "@/components/ServiceList";
 import AboutUs from "@/components/AboutUs";
 
-
 export default function Home() {
-
-
   const section5 = {
     bgGradient:
       "linear-gradient(180deg, rgba(27, 82, 140, 0.40) 0%, rgba(27, 82, 140, 0.00) 100%);",
@@ -37,7 +26,6 @@ export default function Home() {
     overflow: "",
     zIndex: 1000,
   };
-
 
   const footer = {
     bgGradient:
@@ -69,7 +57,7 @@ export default function Home() {
             <ServiceList />
           </Box>
 
-          {/* Product and Solutions */}               
+          {/* Product and Solutions */}
           <Box id="productSolution" py={10} w="100%">
             <Heading
               className="  text-xl lg:text-2xl"
@@ -84,14 +72,14 @@ export default function Home() {
         </div>
 
         <div id="client&partners" className="mb-10 overflow-hidden">
-        <Heading
-              className="  text-xl lg:text-2xl"
-              textAlign="center"
-              color="#73D0FF"
-              mb="40px"
-            >
-              Clients and Partners
-            </Heading>
+          <Heading
+            className="  text-xl lg:text-2xl"
+            textAlign="center"
+            color="#73D0FF"
+            mb="40px"
+          >
+            Clients and Partners
+          </Heading>
           <Companies />
         </div>
 
@@ -164,19 +152,27 @@ export default function Home() {
                 size={24}
               />
             </a>
+            <a
+              href={socialMedia.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok className=" mx-2 text-white hover:text-blue-700 cursor-pointer" />
+            </a>
           </div>
         </footer>
         <Particlebg />
       </main>
-
     </>
   );
 }
 
 const socialMedia = {
   twitter: "https://x.com/IngeniousTech__?t=TmT0ianuNPUgN1C1Nve4eA&s=09",
-  instagram: "https://instagram.com/ingenioustech__?igshid=MmVlMjlkMTBhMg==",
+  instagram:
+    "https://www.instagram.com/ingenious.technology?utm_source=qr&igsh=cmd0eDNjOWN5bDl2",
   linkedin: "https://www.linkedin.com/company/ingenioustechnology/",
   phone: "tel:+2348072210260",
   email: "mailto:ingenioustechltd@gmail.com",
+  tiktok: "https://www.tiktok.com/@ingenioustechnology?_t=ZM-8wUZ2EToqOO&_r=1",
 };
